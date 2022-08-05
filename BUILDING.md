@@ -292,6 +292,10 @@ cmake --build "<path to build dir>" --config Release
 ### Raspberry Pi (and other embedded systems)
 
 * projectM is arch-independent, although there are some SSE2 enhancements for x86
+* To avoid an error with OPENGL, cmake on pi must be run as
+```commandline
+cmake -D "ENABLE_GLES=1" ..
+```
 * [Notes on running on raspberry pi](https://github.com/projectM-visualizer/projectm/issues/115)
 
 ### Build using NDK for Android
